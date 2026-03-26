@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* สไตล์เมนู */
+nav {
+    background: linear-gradient(to right, rgba(0, 79, 237, 0.85), rgba(0, 42, 255, 0.85), rgba(0, 170, 255, 0.85));
+    padding: 15px 20px;
+    text-align: left; /* จัดตำแหน่งเมนูให้ชิดซ้าย */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; /* ชิดซ้าย */
+    
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* ระยะห่างระหว่างเมนู */
+    
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+    border-bottom: 2px solid transparent; /* ขีดใต้ */
+}
+
+nav ul li a:hover {
+    background: rgba(0, 170, 255, 0.8); /* เปลี่ยนพื้นหลังเมื่อเมาส์วาง */
+    border-radius: 10px;
+    color: white;
+    border-bottom: 2px solid white; /* ขีดใต้เมื่อ hover */
+}
+
+nav ul li a i {
+    margin-right: 8px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 5px;
+    color:rgb(38, 14, 255);
+    font-weight: bold;
+}
+
+/* แก้ไขการจัดระเบียบของสินค้า */
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: rgb(236, 235, 231);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    background-color: rgb(125, 219, 75);
+    color: rgb(236, 235, 231);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: rgb(77, 180, 21);
+}
+
+.product-card:hover p {
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+}
+
+/* ปรับการแสดงผลในอุปกรณ์ขนาดเล็ก */
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+h3{
+    margin-top: -25.5%;
+    margin-left: 44%;
+}
+
+.qr-code-img {
+    width: 270px;  /* ปรับขนาดคิวอาโค้ดให้เหมาะสม */
+    height: auto;  /* รักษาสัดส่วนของภาพ */
+    max-width: 100%; /* ขนาดไม่เกินขนาดที่ตั้งไว้ */
+    border: 3px solid #333;  /* ใส่กรอบสีเทา */
+    border-radius: 8px;  /* มุมกรอบโค้ง */
+    margin-left: 42%;
+    padding: 10px;  /* เพิ่มระยะห่างระหว่างกรอบกับคิวอาโค้ด */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* เพิ่มเงาให้กรอบ */
+    margin-top: 7px; /* เพิ่มระยะห่างจากด้านบน */
+}
+

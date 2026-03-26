@@ -1,0 +1,264 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgb(226, 236, 255));
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  background: linear-gradient(to right, rgba(0, 79, 237, 0.85), rgba(0, 42, 255, 0.85), rgba(0, 170, 255, 0.85));
+  position: sticky;
+  width: 100%;
+  z-index: 1000;  
+  transition: top 0.3s; 
+  box-shadow: 0 4px 2px -2px gray; 
+  height: 70px; 
+  display: flex;
+  align-items: center; 
+  border-radius: 3px;
+}
+
+/* การจัดรูปแบบลิงก์ภายใน navbar */
+#navbar a {
+  float: left; 
+  display: block; 
+  color: white; 
+  text-align: center; 
+  padding: 15px; 
+  text-decoration: none; 
+}
+
+/* การจัดรูปแบบลิงก์ภายใน navbar */
+#navbar a {
+  font-size: 20px; 
+  float: left; 
+  display: block; 
+  color: white; 
+  text-align: center; 
+  padding: 15px; 
+  text-decoration: none; 
+}
+
+/* การตั้งค่าสีของลิงก์เมื่อผู้ใช้วางเมาส์ */
+#navbar a:hover {
+  background-color:rgb(0, 145, 255); 
+  border-radius: 20px;
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+/* ========== Carousel Slide ========== */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: autoSlide 16s infinite ease-in-out;
+}
+
+.carousel-track img {
+  width: 500px;
+  height: 500px;
+  margin-right: 28px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  /* เพิ่มกรอบ + เงา */
+  border: 2px solid #ccc;
+  background-color:rgb(225, 225, 225);
+  padding: 10px;
+  box-shadow: 0 2px 10px rgb(85, 85, 85);
+
+  /* ทำให้ภาพคมชัดขึ้น */
+  image-rendering: auto;
+  object-fit: cover;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+
+@keyframes autoSlide {
+  0%, 20% { transform: translateX(0); }
+  25%, 45% { transform: translateX(-420px); }
+  50%, 70% { transform: translateX(-840px); }
+  75%, 95% { transform: translateX(-1260px); }
+  100% { transform: translateX(0); }
+}
+/* ========== กล่องคอนเทนเนอร์หลัก ========== */
+.container {
+  max-width: 100%;
+  margin: 50px auto;
+  background: #ffffff;
+  font-size: 24px;
+  padding: 35px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ========== หัวข้อหน้าหลัก========== */
+h1 {
+  margin-bottom: 30px;
+  color: #0984e3;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600px;
+  margin-top: 2px;
+}
+
+.section h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #0984e3;
+  font-size: 26px;
+  border-bottom: 2px solid #dfe6e9;
+  padding-bottom: 5px;
+}
+
+/* ========== แบบฟอร์ม input ========== */
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  gap: 10px; /* ระยะห่างระหว่างฟิลด์ฟอร์ม */
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+textarea {
+  border-color:rgb(211, 211, 211);
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 5px rgba(116, 185, 255, 0.5);
+  outline: none;
+}
+
+/* ========== ปุ่ม ========== */
+button {
+  margin-top: 25px;
+  margin-left: 40%;
+  padding: 14px 20px;
+  background-color:rgb(57, 195, 73);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  width: 20%;
+  transition: background 0.25s ease, transform 0.1s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color:rgb(125, 240, 76);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgb(125, 240, 76);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== รายการข้อมูลซ่อม ========== */
+.repair-list {
+  margin-top: 50px;
+}
+
+/* ========== ส่วนติดต่อกับเรา ========== */
+.contact-section {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #dfe6e9;
+  border-radius: 15px;
+}
+
+/* สไตล์สำหรับไอคอน Instagram */
+.fa-instagram {
+  background: linear-gradient(200deg, rgb(255, 14, 211), rgb(187, 12, 226), rgb(240, 36, 0), rgb(251, 255, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: 8px;
+  font-size: 24px;
+}
+.fa-facebook {
+  background: linear-gradient(to right, rgb(70, 42, 255), rgb(55, 98, 238));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.fa-map-location-dot {
+  background: linear-gradient(to right, rgb(255, 117, 42), rgb(238, 82, 55));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.fa-address-book {
+  background: linear-gradient(to right, rgba(73, 73, 73, 0.86), rgba(43, 43, 43, 0.86), rgba(0, 0, 0, 0.86));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: 8px;
+  font-size: 32px;
+}
+
+.contact-section h2 {
+  color: #2d3436;
+}
+
+.message.success {
+  color: green;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ปรับข้อความข้อผิดพลาด */
+.message.danger {
+  background-color:rgb(255, 165, 173);  /* สีพื้นหลังสีแดงอ่อน */
+  color:rgb(164, 22, 36);  /* สีข้อความเป็นสีแดง */
+  padding: 10px;
+  margin-bottom: 20px;  /* เพิ่มระยะห่างด้านล่างของข้อความแสดงข้อผิดพลาด */
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-size: 24px;
+  top: 5%;
+  text-align: center;
+}
+
+/* เพิ่มระยะห่างให้กับฟอร์ม */
+form {
+  margin-bottom: 20px;  /* เพิ่มระยะห่างด้านล่างของฟอร์ม */
+}
+
+
+/* เน้นช่องที่ขาดหาย */
+.highlight {
+  border: 2px solid red;
+  background-color: #f8d7da;
+}

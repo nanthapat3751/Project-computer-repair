@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>ระบบจัดการซ่อมคอมพิวเตอร์</title>
+
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="#home"><i class="fa-solid fa-house"></i> หน้าหลัก</a>
+        <a href="#info"><i class="fa-solid fa-file"></i> ข้อมูลการซ่อมคอมพิวเตอร์</a>
+        <a href="#contact"><i class="fa-solid fa-phone-volume"></i> ข้อมูลติดต่อ</a>
+        <a href="#repair_order" onclick="window.location.href='user.html'"><i class="fa-solid fa-screwdriver-wrench"></i> ข้อมูลการซ่อม</a>
+        <a href="#price" onclick="window.location.href='showitem.html'"><i class="fa-solid fa-money-check-dollar"></i> ราคาซ่อมแต่ละประเภท</a>
+      </div>
+      
+  <section id="home" class="container">
+    <h1>ระบบจัดการซ่อมคอมพิวเตอร์</h1>
+     <div class="carousel">
+      <div class="carousel" id="autoCarousel">
+        <div class="carousel-track">
+          <img src="D:\PROJECT\images\13.jpg" alt="" />
+          <img src="D:\PROJECT\images\11.jpg" alt="" />
+          <img src="D:\PROJECT\images\9.jpg" alt="" />
+          <img src="D:\PROJECT\images\10.jpg" alt="" />
+          <img src="D:\PROJECT\images\3.jpeg" alt="" />
+          <img src="D:\PROJECT\images\4.jpeg" alt="" />
+          <img src="D:\PROJECT\images\12.jpg" alt="" />
+          <img src="D:\PROJECT\images\14.jpg" alt="" />
+        </div>
+      </div>
+  </section>
+
+    <section id="info" class="container">
+        <form id="repairForm">
+            <div class="section">
+                <h2>ข้อมูลลูกค้า</h2>
+                <label for="customer">ชื่อลูกค้า:</label>
+                <input type="text" name="customer" placeholder="กรุณากรอกชื่อ" required />
+                <label for="phone">เบอร์โทร:</label>
+                <input type="tel" name="phone" placeholder="กรุณากรอกเบอร์โทร" required />
+                <label for="email">อีเมล:</label>
+                <input type="email" name="email" placeholder="กรุณากรอกอีเมล" />
+            </div>
+
+            <div class="section">
+                <h2>ข้อมูลการซ่อมคอมพิวเตอร์</h2>
+                <label for="deviceType">ประเภทอุปกรณ์:</label>
+                <select name="deviceType" required>
+                    <option value="">-- เลือกประเภทอุปกรณ์ --</option>
+                    <option value="PC">PC</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Keyboard">Keyboard</option>
+                    <option value="Mouse">Mouse</option>
+                    <option value="CPU">CPU</option>
+
+                </select>
+                <label for="brand">ยี่ห้อ / รุ่นคอมพิวเตอร์:</label>
+                <input type="text" name="brand" placeholder="กรุณากรอกยี่ห้อ/รุ่น" required />
+                <label for="accessories">อุปกรณ์ที่แนบมาด้วย:</label>
+                <input type="text" name="accessories" placeholder="เช่น ที่ชาร์จ, สาย LAN" />
+                <label for="problem">รายละเอียดของปัญหา:</label>
+                <textarea name="problem" placeholder="กรุณาระบุปัญหาที่พบ" required></textarea>
+                <label for="date">วันที่ส่งซ่อม:</label>
+                <input type="date" name="date" required />
+            </div>
+
+             <!-- เพิ่ม div ที่มี id="message" เพื่อแสดงข้อความ -->
+        <div id="message"></div>
+            <button type="button" onclick="submitData()" class="button">บันทึกรายการซ่อม</button>
+        </form>
+       
+    </section>
+
+    <section id="contact" class="container contact-section">
+        <h2><i class="fa-solid fa-address-book"></i> Contact us</h2>
+        <p><i class="fa-solid fa-map-location-dot"></i> : 123/45 หมู่ 6 ถนนลาดพร้าว แขวงวังทองหลาง เขตวังทองหลาง กรุงเทพฯ</p>
+        <p>📞: 095-884-4642</p>
+
+        <div class="social-icons">
+            <p>
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/ntpxtt.s/" target="_blank">ntpxtt.s</a>
+              </p>
+            <p><i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/xrtistzz._/" target="_blank">xrtistzz_</a>
+            </p>
+            <p><i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/profile.php?id=100019804202203" target="_blank">Nanthapat Tang</a>
+            </p>
+            <p><i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/profile.php?id=100020236086072" target="_blank">Nattapat Suwannayuha</a>
+            </p>
+        </div>
+        <p><i class="fa-solid fa-envelope"></i> :  contact@techpro.com</p>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
